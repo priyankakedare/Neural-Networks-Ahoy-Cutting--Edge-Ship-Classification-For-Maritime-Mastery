@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Classification Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <img src="{{ url_for('static', filename='flask/static/images/1 (2).jpg') }}">
+    
+</head>
+<body>
+    <header>
+        <div class="row">
+            <h1>Welcome To Our Ship Classification Project</h1>
+            <p>Ship Classification Image</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="content">
+            <h2>About The Project</h2>
+            <p>Ship or vessel detection has a wide range of applications in the areas of maritime safety, fisheries management, marine pollution, defense, maritime security, protection from piracy, and illegal migration.</p>
+            <p>In this project, we are developing a deep learning model to detect and classify various types of ships. Users can upload an image to the web application and view the analysis results.</p>
+        </section>
+
+        <section class="content">
+            <h2>We Can Classify</h2>
+            <div class="ship-cards">
+                <div class="card cargo">
+                    <h4>Cargo</h4>
+                    <img src="{{ url_for('static', filename='images/Cargo.jpg') }}" alt="Cargo Ship">
+                    <p>Cargo, also known as freight, refers to goods being transported by water, air, or land.</p>
+                </div>
+                <div class="card carrier">
+                    <h4>Carrier</h4>
+                    <img src="{{ url_for('static', filename='images/carrier.jpg') }}" alt="Carrier Ship">
+                    <p>A carrier vessel transports fish, supplies, and crew to and from fishing vessels.</p>
+                </div>
+                <div class="card cruise">
+                    <h4>Cruise</h4>
+                    <img src="{{ url_for('static', filename='images/cruise.jpg') }}" alt="Cruise Ship">
+                    <p>A large ship that takes many people on a cruise at one time.</p>
+                </div>
+                <div class="card military">
+                    <h4>Military</h4>
+                    <img src="{{ url_for('static', filename='images/military.jpg') }}" alt="Military Ship">
+                    <p>A ship primarily intended for naval warfare.</p>
+                </div>
+                <div class="card tanker">
+                    <h4>Tankers</h4>
+                    <img src="{{ url_for('static', filename='images/tanker.jpg') }}" alt="Tanker Ship">
+                    <p>Specialized ships for transporting liquefied natural gas and fruit juices.</p>
+                </div>
+            </div>
+       <section class="content">
+            <!-- Link to prediction page -->
+            <a href="{{ url_for('prediction') }}" class="button">Make a Prediction</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Thank You</p>
+    </footer>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ship Prediction</title>
+    <style>
+        body {
+            background-image: url("static/images/2.jpg");
+            background-color:  /* Example: light gray background color */
+            color: black; /* Change text color to black */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #resultContainer {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #imageDisplay img {
+            max-width: 300px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Update shadow color for image */
+        }
+
+        #predictionText {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Predict Ship Image</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <button onclick="predictImage()">Predict</button>
+
+    <div id="resultContainer">
+        <h2>Prediction Result</h2>
+        <div id="imageDisplay"></div>
+        <p id="predictionText"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
